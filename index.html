@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#17121f" />
+  <meta name="description" content="Portfolio of Priti Garudkar — Web Developer showcasing responsive websites and interactive web applications." />
+  <title>Priti Garudkar | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#302344;--navy2:#554078;--blue:#9676c9;--sky:#eee5fa;--paper:#fcf9ff;--white:#ffffff;--ink:#352a43;--muted:#796b8c;--line:#e6d9f2;--lime:#d7c2f1;--radius:22px;--shadow:0 18px 50px rgba(16,29,53,.09)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:90px} body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65} a{color:inherit;text-decoration:none} button{font:inherit} .wrap{width:min(1120px,calc(100% - 42px));margin:auto}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(247,248,252,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(227,232,241,.8)} .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.6px;font-size:1.12rem}.brand span{color:var(--blue)} .nav-links{display:flex;gap:28px;align-items:center;color:#766a89;font-size:.92rem}.nav-links a:hover{color:var(--blue)} .nav-cta{background:var(--navy);color:white!important;padding:11px 17px;border-radius:999px}.menu-toggle{display:none;background:none;border:0;color:var(--navy);font-size:1.5rem}
+    .hero{padding:82px 0 76px;overflow:hidden;background:radial-gradient(circle at 86% 20%,#eee5fa 0,transparent 28%),linear-gradient(180deg,#fcf9ff,#f5effb)} .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:1.7px;font-size:.76rem;font-weight:700;color:var(--blue)}.eyebrow:before{content:'';width:25px;height:2px;background:var(--blue)} h1,h2,h3,p{margin-top:0} h1{font-family:Manrope,sans-serif;font-size:clamp(2.7rem,6vw,5.15rem);line-height:1.04;letter-spacing:-3px;margin:19px 0 24px;color:var(--navy)} h1 em{font-style:normal;color:var(--blue)} .hero-copy{max-width:560px;font-size:1.09rem;color:var(--muted);margin-bottom:30px}.actions{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:999px;font-weight:700;font-size:.93rem;border:1px solid transparent;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--blue);color:white;box-shadow:0 10px 24px rgba(71,120,237,.22)}.btn-secondary{border-color:#e4d6f0;background:white;color:var(--navy)}
+    .hero-art{position:relative;min-height:400px;display:grid;place-items:center}.orbit{width:min(355px,85vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#eee5fa,#f1e8fb);border:1px solid #d9c6ee;position:relative;display:grid;place-items:center}.orbit:before,.orbit:after{content:'';position:absolute;border:1px solid rgba(71,120,237,.22);border-radius:50%;inset:26px}.orbit:after{inset:56px}.initials{width:205px;height:205px;border-radius:34% 66% 55% 45% / 44% 38% 62% 56%;background:var(--navy);color:white;display:grid;place-items:center;font-family:Manrope,sans-serif;font-weight:800;font-size:4.2rem;letter-spacing:-5px;transform:rotate(-7deg);box-shadow:0 28px 55px rgba(16,29,53,.22);z-index:2}.float-tag{position:absolute;z-index:3;padding:12px 15px;border-radius:15px;background:white;box-shadow:var(--shadow);font-size:.84rem;font-weight:700;display:flex;align-items:center;gap:8px}.float-tag b{width:9px;height:9px;border-radius:50%;background:var(--lime);display:inline-block}.tag-one{top:48px;right:-8px}.tag-two{bottom:55px;left:-10px}.spark{position:absolute;color:var(--blue);font-size:2rem}.spark-one{top:35px;left:25px}.spark-two{bottom:40px;right:35px}
+    .quickfacts{margin-top:-1px;background:var(--navy);color:white}.facts-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:25px 0}.fact{padding:7px 28px;border-right:1px solid rgba(255,255,255,.16)}.fact:first-child{padding-left:0}.fact:last-child{border:0}.fact strong{display:block;font-family:Manrope,sans-serif;font-size:1.05rem}.fact span{font-size:.85rem;color:#d9cbe8}
+    section{padding:88px 0}.section-head{max-width:640px;margin-bottom:38px}.section-head h2{font-family:Manrope,sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-1.3px;color:var(--navy);margin:13px 0}.section-head p{color:var(--muted);margin-bottom:0}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}.about-card{background:var(--navy);color:white;padding:30px;border-radius:var(--radius);min-height:270px;position:relative;overflow:hidden}.about-card:after{content:'✳';position:absolute;font-size:11rem;line-height:1;color:rgba(255,255,255,.06);right:-10px;bottom:-40px}.about-card small{color:#d9cbe8;text-transform:uppercase;letter-spacing:1.4px}.about-card h3{font-family:Manrope,sans-serif;font-size:1.65rem;line-height:1.25;max-width:260px;margin:20px 0 0}.about-text p{color:var(--muted);font-size:1.02rem}.about-text p strong{color:var(--ink)}.mini-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.mini-point{padding:14px 15px;border:1px solid var(--line);border-radius:14px;background:white;font-weight:600;font-size:.9rem}.mini-point span{color:var(--blue);margin-right:7px}
+    .skills-section{background:#f1eafa}.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.skill-card{background:white;border:1px solid #e6d9f2;border-radius:18px;padding:23px;min-height:205px;transition:transform .2s,box-shadow .2s}.skill-card:hover,.project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.skill-icon{width:43px;height:43px;display:grid;place-items:center;background:var(--sky);border-radius:13px;font-size:1.25rem;margin-bottom:18px}.skill-card h3{font-family:Manrope,sans-serif;font-size:1.08rem;margin-bottom:10px}.skill-card p{font-size:.9rem;color:var(--muted);margin-bottom:0}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.chip{font-size:.77rem;padding:6px 10px;background:#f1eafa;border-radius:999px;color:#6f5d83}
+    .projects-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.project-card{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s}.project-visual{height:200px;background:linear-gradient(135deg,#554078,#9676c9);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.project-visual:before{content:'';position:absolute;width:250px;height:250px;border:1px solid rgba(255,255,255,.2);border-radius:50%;left:calc(50% - 125px);top:calc(50% - 125px)}.project-visual:after{content:'';position:absolute;width:175px;height:175px;border:1px solid rgba(255,255,255,.2);border-radius:50%}.bulb{z-index:1;font-size:4.5rem;filter:drop-shadow(0 0 22px rgba(215,243,106,.5))}.network-visual{background:linear-gradient(135deg,#5b4779,#b69adf)}.network-nodes{z-index:1;display:flex;align-items:center;gap:13px;color:white;font-size:2.1rem}.network-nodes span{font-size:1rem;color:var(--lime)}.project-content{padding:25px}.project-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.project-type{color:var(--blue);font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase}.project-year{color:#9d91ad;font-size:.8rem}.project-content h3{font-family:Manrope,sans-serif;font-size:1.35rem;line-height:1.3;margin-bottom:12px}.project-content p{color:var(--muted);font-size:.93rem}.project-content .chips{margin-bottom:0}
+    .education{background:var(--navy);color:white}.education .section-head h2{color:white}.education .section-head p{color:#d9cbe8}.timeline{border-left:1px solid #806a9c;margin-left:8px;padding-left:28px;display:grid;gap:24px}.timeline-item{position:relative;padding:0 0 5px}.timeline-item:before{content:'';position:absolute;width:12px;height:12px;background:var(--lime);border-radius:50%;left:-35px;top:7px;box-shadow:0 0 0 5px rgba(215,243,106,.12)}.timeline-item .date{color:var(--lime);font-size:.8rem;font-weight:700;letter-spacing:1px}.timeline-item h3{font-family:Manrope,sans-serif;font-size:1.16rem;margin:7px 0}.timeline-item p{color:#d9cbe8;margin:0;font-size:.92rem}
+    .learning-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.learning-card{padding:25px;border:1px solid var(--line);background:white;border-radius:18px}.learning-card h3{font-family:Manrope,sans-serif;margin-bottom:9px}.learning-card p{color:var(--muted);font-size:.92rem;margin-bottom:0}.status{display:inline-flex;align-items:center;gap:7px;font-size:.78rem;color:#8265aa;font-weight:700;background:#f3eafa;border-radius:999px;padding:6px 10px;margin-bottom:15px}.status:before{content:'';width:7px;height:7px;background:#b89add;border-radius:50%}
+    .contact{padding:78px 0}.contact-panel{background:var(--sky);border-radius:28px;padding:clamp(28px,6vw,60px);display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center;position:relative;overflow:hidden}.contact-panel:after{content:'↗';position:absolute;right:27%;top:-55px;font-size:15rem;color:rgba(71,120,237,.07);font-weight:700;pointer-events:none}.contact-panel h2{font-family:Manrope,sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;letter-spacing:-1.2px;color:var(--navy);margin:13px 0}.contact-panel p{max-width:570px;color:#596a85;margin-bottom:0}.contact-panel .btn{z-index:1;white-space:nowrap}.footer{padding:25px 0;color:#7b8699;font-size:.84rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;align-items:center}.footer strong{color:var(--navy)}.socials{display:flex;gap:18px}.socials a:hover{color:var(--blue)}
+    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:15px}.hero{padding-top:60px}.hero-art{min-height:350px}.orbit{width:300px}.initials{width:170px;height:170px;font-size:3.5rem}.tag-one{right:8%}.tag-two{left:8%}.about-grid{grid-template-columns:1fr;gap:25px}.skills-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr}.project-visual{height:175px}.contact-panel{grid-template-columns:1fr}.contact-panel .btn{justify-self:start}.fact{padding:7px 16px}.fact:first-child{padding-left:0}}
+    @media(max-width:560px){.wrap{width:min(100% - 30px,1120px)}.nav-inner{height:66px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:65px;left:0;right:0;background:var(--paper);padding:18px 22px 24px;flex-direction:column;align-items:stretch;gap:14px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-cta{text-align:center}.hero{padding:48px 0 42px}h1{letter-spacing:-2px}.hero-copy{font-size:1rem}.hero-art{min-height:315px}.orbit{width:260px}.initials{width:145px;height:145px;font-size:3rem}.float-tag{font-size:.75rem;padding:10px 12px}.tag-one{top:27px}.tag-two{bottom:30px}.facts-grid{grid-template-columns:1fr;padding:12px 0}.fact,.fact:first-child{padding:13px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.15)}.fact:last-child{border:0}.fact strong{display:inline;margin-right:8px}.fact span{display:inline}section{padding:64px 0}.skills-grid{grid-template-columns:1fr}.skill-card{min-height:0}.mini-points,.learning-grid{grid-template-columns:1fr}.contact-panel{border-radius:22px}.footer-inner{align-items:flex-start;flex-direction:column}.socials{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+    /* Light ivory + sage + warm gold theme */
+    :root{--navy:#5a4774;--navy2:#6a5488;--blue:#8c75ad;--sky:#f6f0fb;--paper:#fcf9ff;--white:#ffffff;--ink:#473857;--muted:#81748f;--line:#e7dcef;--lime:#9b78c8;--radius:20px;--shadow:0 18px 50px rgba(36,59,50,.10)}
+    body{background:var(--paper);color:var(--ink)}
+    .nav{background:rgba(251,249,244,.92);border-bottom-color:#e7dcef}
+    .brand,.nav-links a,.menu-toggle{color:var(--navy)}
+    .nav-links{color:#766784}.nav-cta{background:var(--navy);color:#fff!important}
+    .hero{background:radial-gradient(circle at 83% 14%,rgba(193,139,69,.13),transparent 30%),linear-gradient(180deg,#fffdf8,#faf6fd)}
+    h1,h2,h3{color:var(--navy)} h1 em{color:var(--blue)}
+    .eyebrow{color:var(--blue)}.eyebrow:before{background:var(--blue)}
+    .btn-primary{background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(36,59,50,.16)}
+    .btn-secondary{border-color:#e9e0f0;background:#fff;color:var(--navy)}
+    .orbit{background:linear-gradient(145deg,#f2ebf9,#fbf7ff);border-color:#dce5d9}
+    .orbit:before,.orbit:after{border-color:rgba(83,123,99,.25)}
+    .initials{background:var(--navy);color:#fff;box-shadow:0 28px 55px rgba(36,59,50,.2)}
+    .float-tag{background:#fff;color:var(--navy);border:1px solid #e7dcef}.float-tag b{background:#9b78c8}.spark{color:#9b78c8}
+    .quickfacts,.education{background:var(--navy);color:#fff}.fact span,.about-card small,.education .section-head p,.timeline-item p{color:#e2d5ef}
+    .about-card{background:var(--navy);border:1px solid #766293}.about-card:after{color:rgba(255,255,255,.07)}
+    .about-text p,.section-head p{color:var(--muted)}.about-text p strong{color:var(--ink)}
+    .mini-point,.skill-card,.project-card,.learning-card{background:#fff;border-color:var(--line);color:var(--ink)}
+    .mini-point span,.project-type{color:var(--blue)}
+    .skills-section{background:#f6f0fb}.skill-icon{background:#f0e8f8;color:var(--blue)}.skill-card p,.project-content p,.learning-card p{color:var(--muted)}
+    .chip{background:#f6f0fb;color:#79668f;border:1px solid #e7dcef}
+    .project-visual{background:linear-gradient(135deg,#6a5488,#9b78c8)}.network-visual{background:linear-gradient(135deg,#f0e8f8,#cbb4e6)}.network-nodes{color:#5a4774}.network-nodes span{color:#8c75ad}
+    .project-year{color:#a195b1}.project-card:hover,.skill-card:hover{box-shadow:var(--shadow)}
+    .timeline{border-left-color:#d2c1e5}.timeline-item:before{background:#9b78c8;box-shadow:0 0 0 5px rgba(193,139,69,.14)}.timeline-item .date{color:#cbb4e6}
+    .status{color:#6d5587;background:#f1e8fa}.status:before{background:#9b78c8}
+    .contact-panel{background:#f2ebf9;border:1px solid #e8dff0}.contact-panel:after{color:rgba(83,123,99,.08)}.contact-panel p{color:var(--muted)}
+    .footer{color:#81748f}.footer strong{color:var(--navy)}.socials a:hover,.nav-links a:hover{color:var(--blue)}
+    .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:relative;z-index:1}.contact-actions .btn{white-space:nowrap}.project-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}.project-links a{font-weight:700;font-size:.9rem;color:var(--blue)}.project-links a:hover{text-decoration:underline}.project-links a span{margin-left:4px}
+    @media(max-width:800px){.projects-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.nav-links{background:#fcf9ff;border-bottom-color:#e7dcef}}
+
+    /* Dark lavender theme */
+    :root{--navy:#21182d;--navy2:#342342;--blue:#c0a0f4;--sky:#30233d;--paper:#17121f;--white:#211a2b;--ink:#f2eafa;--muted:#c0b2ce;--line:#493757;--lime:#d8c1ff;--shadow:0 18px 50px rgba(0,0,0,.28)}
+    body{background:var(--paper);color:var(--ink)}
+    .nav{background:rgba(23,18,31,.92);border-bottom-color:#392944}
+    .brand,.nav-links a,.menu-toggle{color:#eee3fb}.nav-links{color:#d1c2df}.nav-links a:hover,.socials a:hover{color:var(--blue)}
+    .hero{background:radial-gradient(circle at 83% 14%,rgba(192,160,244,.15),transparent 30%),linear-gradient(180deg,#21182d,#17121f)}
+    h1,h2,h3,.section-head h2{color:#f4ecfc} h1 em{color:var(--blue)}
+    .hero-copy,.about-text p,.section-head p,.skill-card p,.project-content p,.learning-card p{color:var(--muted)}
+    .btn-primary,.nav-cta{background:#9874cf;color:#fff!important;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+    .btn-secondary{border-color:#51405f;background:#292033;color:#f2eafa}
+    .orbit{background:linear-gradient(145deg,#30233d,#21182d);border-color:#574269}.orbit:before,.orbit:after{border-color:rgba(192,160,244,.28)}
+    .initials{background:#9874cf;color:white}.float-tag{background:#292033;color:#f2eafa;border:1px solid #493757}.float-tag b{background:#c0a0f4}
+    .quickfacts,.education,.about-card{background:#21182d;color:#fff;border-color:#493757}.fact span,.about-card small,.education .section-head p,.timeline-item p{color:#d7c8e5}
+    .mini-point,.skill-card,.project-card,.learning-card{background:#211a2b;border-color:#493757;color:#f2eafa}
+    .skills-section,.services-section{background:#1d1626}.skill-icon{background:#382748;color:#d4baff}
+    .chip{background:#30233d;color:#dfcff5;border-color:#493757}.project-visual{background:linear-gradient(135deg,#342342,#9874cf)}.network-visual{background:linear-gradient(135deg,#382748,#72539c)}.network-nodes{color:#fff}.network-nodes span{color:#e0ccff}
+    .project-year,.footer{color:#b7a7c8}.timeline{border-left-color:#594568}.timeline-item:before{background:#c0a0f4;box-shadow:0 0 0 5px rgba(192,160,244,.15)}.timeline-item .date{color:#d7bfff}
+    .status{color:#e0ccff;background:#382748}.status:before{background:#c0a0f4}
+    .contact-panel{background:#292033;border:1px solid #493757}.contact-panel h2{color:#f4ecfc}.contact-panel p{color:#c0b2ce}.contact-panel:after{color:rgba(192,160,244,.08)}
+    .footer strong{color:#f4ecfc}.project-links a{color:#c0a0f4}.nav-links{background:transparent}
+    @media(max-width:560px){.nav-links{background:#21182d;border-bottom-color:#493757}}
+  
+    .services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+    .service-card{height:100%}
+    @media(max-width:900px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+    /* Services section styled to match the supplied visual reference */
+    .services-reference-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .service-reference-card {
+      box-sizing: border-box;
+      min-height: 204px;
+      padding: 24px 21px;
+      border: 1px solid rgba(119, 174, 143, 0.25);
+      border-radius: 16px;
+      background: rgba(18, 39, 30, 0.62);
+      color: #f4f6f3;
+    }
+    .service-reference-icon {
+      min-height: 36px;
+      margin-bottom: 16px;
+      color: #f5b640;
+      font-size: 27px;
+      line-height: 1.2;
+    }
+    .service-reference-card h3 {
+      margin: 0 0 18px;
+      color: #f7f8f6;
+      font-size: 19px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+    .service-reference-card p {
+      margin: 0;
+      color: #c8d5ce;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    @media (max-width: 760px) {
+      .services-reference-grid { grid-template-columns: 1fr; }
+      .service-reference-card { min-height: auto; }
+    }
+
+
+    /* Services: keep the portfolio's dark theme, green borders, and gold accents */
+    .services-reference-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .service-reference-card {
+      box-sizing: border-box;
+      min-height: 190px;
+      padding: 24px 21px;
+      border: 1px solid rgba(119, 174, 143, 0.25);
+      border-radius: 16px;
+      background: rgba(18, 39, 30, 0.62);
+      color: var(--text, #f4f6f3);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .service-reference-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(119, 174, 143, 0.55);
+    }
+    .service-reference-icon {
+      min-height: 36px;
+      margin-bottom: 16px;
+      color: var(--accent, #f5b640);
+      font-size: 27px;
+      line-height: 1.2;
+    }
+    .service-reference-card h3 {
+      margin: 0 0 14px;
+      color: var(--text, #f7f8f6);
+      font-size: 19px;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+    .service-reference-card p {
+      margin: 0;
+      color: var(--muted, #c8d5ce);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    @media (max-width: 650px) {
+      .services-reference-grid { grid-template-columns: 1fr; }
+      .service-reference-card { min-height: auto; }
+    }
+
+
+    /* Services section: lavender reference style */
+    .services-reference-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+      margin-top: 40px;
+    }
+    .service-reference-card {
+      box-sizing: border-box;
+      min-height: 218px;
+      padding: 23px;
+      border: 1px solid rgba(190, 145, 220, 0.27);
+      border-radius: 18px;
+      background: rgba(44, 30, 54, 0.42);
+      color: #f8f3ff;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .service-reference-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(201, 164, 255, 0.55);
+    }
+    .service-reference-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 43px;
+      height: 43px;
+      margin-bottom: 22px;
+      border-radius: 13px;
+      background: rgba(143, 89, 174, 0.22);
+      color: #d4a9ff;
+      font-size: 23px;
+      line-height: 1;
+    }
+    .service-reference-card h3 {
+      margin: 0 0 14px;
+      color: #fbf8ff;
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+    .service-reference-card p {
+      margin: 0;
+      color: #d6c7e4;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    @media (max-width: 760px) {
+      .services-reference-grid { grid-template-columns: 1fr; margin-top: 26px; }
+      .service-reference-card { min-height: auto; }
+    }
+
+</style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Priti Garudkar home">PG<span>.</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" id="menuToggle">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#education">Education</a><a href="#contact" class="nav-cta">Contact me ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Web Developer · Front-End Development</div>
+          <h1>Hello, I'm<br><em>Priti Garudkar.</em></h1>
+          <p class="hero-copy">I build clean, responsive, and user-friendly websites and web applications. I enjoy turning ideas into useful digital experiences with HTML, CSS, and JavaScript, with a focus on thoughtful design, usability, and responsive layouts.</p>
+          <div class="actions"><a class="btn btn-primary" href="#projects">Explore my work <span>↘</span></a><a class="btn btn-secondary" href="#contact">Let's connect <span>↗</span></a></div>
+        </div>
+        <div class="hero-art" aria-label="Decorative initials illustration">
+          <span class="spark spark-one">✳</span><span class="spark spark-two">✦</span>
+          <div class="orbit"><div class="initials">PG</div></div>
+          <div class="float-tag tag-one"><b></b> Design · Develop · Deliver</div>
+          <div class="float-tag tag-two">⌘ &nbsp; Build · Test · Improve</div>
+        </div>
+      </div>
+    </section>
+    <div class="quickfacts"><div class="wrap facts-grid"><div class="fact"><strong>Front-End Development</strong><span>HTML · CSS · JavaScript</span></div><div class="fact"><strong>Responsive Design</strong><span>Mobile · Tablet · Desktop</span></div><div class="fact"><strong>Data & Reporting</strong><span>SQL · Excel · Power BI</span></div></div></div>
+    <section id="about"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">A little about me</div><h2>Building thoughtful, responsive experiences for the web.</h2></div>
+      <div class="about-grid">
+        <div class="about-card"><small>My approach</small><h3>Turn ideas into polished, user-friendly web experiences.</h3></div>
+        <div class="about-text"><p>I'm <strong>Priti Garudkar</strong>, a Bachelor of Engineering graduate in <strong>Information Technology</strong> focused on Web Development. I enjoy creating responsive websites and interactive interfaces that look clean, feel intuitive, and work smoothly across devices.</p><p>I’m strengthening my skills in <strong>HTML, CSS, JavaScript, responsive design, and front-end development workflows</strong> through hands-on projects.</p>
+          <div class="mini-points"><div class="mini-point"><span>✦</span>Quick learner</div><div class="mini-point"><span>✦</span>Problem-solving mindset</div><div class="mini-point"><span>✦</span>Adaptable and responsible</div><div class="mini-point"><span>✦</span>Analytical and creative</div></div>
+        </div>
+      </div>
+    </div></section>
+    <section class="skills-section" id="skills"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">My toolkit</div><h2>Technical skills</h2><p>Core technologies and practices I use to build responsive, accessible, and engaging web experiences.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card"><div class="skill-icon">⌘</div><h3>HTML & Semantic Structure</h3><p>Writing clear, structured, accessible page content and reusable website sections.</p><div class="chips"><span class="chip">HTML5</span><span class="chip">Semantic HTML</span><span class="chip">Accessibility</span></div></article>
+        <article class="skill-card"><div class="skill-icon">▥</div><h3>CSS & Responsive Layouts</h3><p>Designing polished layouts that adapt to mobile, tablet, and desktop screens.</p><div class="chips"><span class="chip">CSS3</span><span class="chip">Flexbox</span><span class="chip">CSS Grid</span><span class="chip">Media Queries</span></div></article>
+        <article class="skill-card"><div class="skill-icon">▤</div><h3>JavaScript</h3><p>Adding interactivity, dynamic behavior, and useful client-side features to websites.</p><div class="chips"><span class="chip">ES6+</span><span class="chip">DOM</span><span class="chip">Events</span><span class="chip">Form Validation</span></div></article>
+        <article class="skill-card"><div class="skill-icon">&lt;/&gt;</div><h3>Front-End Development</h3><p>Creating responsive page layouts with accessible, structured markup and styling.</p><div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">Responsive Design</span></div></article>
+        <article class="skill-card"><div class="skill-icon">◇</div><h3>Web Design</h3><p>Building simple, consistent interfaces that are easy to navigate on different screens.</p><div class="chips"><span class="chip">Flexbox</span><span class="chip">CSS Grid</span><span class="chip">Mobile-first</span><span class="chip">UI Layouts</span></div></article>
+        <article class="skill-card"><div class="skill-icon">▥</div><h3>Data & Reporting</h3><p>Supporting web projects and business decisions with organized data, clear summaries, and simple visual reports.</p><div class="chips"><span class="chip">SQL</span><span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">Data Visualization</span></div></article>
+      </div>
+    </div></section>
+    <section id="projects"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects</h2><p>A showcase of responsive websites and practical web applications built with a focus on usability, design, and interactive experiences.</p></div>
+      <div class="projects-grid">
+        <article class="project-card"><div class="project-visual"><div class="bulb">✓</div></div><div class="project-content"><div class="project-top"><span class="project-type">Web Application</span><span class="project-year">Task management</span></div><h3>TaskFlow — Task Management Web App</h3><p>A task management web application designed to help users organize tasks, track progress, and manage their daily workflow through a clear, easy-to-use interface.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">UI/UX</span></div><div class="project-links"><a href="https://priti1407.github.io/TaskFlow-Task-Management-Web-App/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a></div></div></article>
+        <article class="project-card"><div class="project-visual network-visual"><div class="network-nodes" aria-label="Wardrobe illustration">✦ <span>STYLE · ORGANIZE · DISCOVER</span></div></div><div class="project-content"><div class="project-top"><span class="project-type">Web Application</span><span class="project-year">Digital wardrobe</span></div><h3>ClosetIQ — Smart Digital Wardrobe</h3><p>A digital wardrobe concept for organizing clothing and making outfit planning easier, presented through a modern interface focused on style and usability.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Responsive UI</span></div><div class="project-links"><a href="https://priti1407.github.io/ClosetIQ-Smart-Digital-Wardrobe/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a></div></div></article>
+        <article class="project-card"><div class="project-visual"><div class="bulb">☕</div></div><div class="project-content"><div class="project-top"><span class="project-type">Website</span><span class="project-year">Responsive design</span></div><h3>Coffee Shop Website</h3><p>A responsive coffee shop website featuring an inviting hero section, menu highlights, an about section, and contact links, designed to adapt across desktop and mobile screens.</p><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Responsive Design</span></div><div class="project-links"><a href="https://priti1407.github.io/coffee_shop_web/" target="_blank" rel="noopener noreferrer">Live website <span>↗</span></a><a href="https://github.com/Priti1407/coffee_shop_web" target="_blank" rel="noopener noreferrer">Source code <span>↗</span></a></div></div></article>
+        <article class="project-card"><div class="project-visual"><div class="bulb">📊</div></div><div class="project-content"><div class="project-top"><span class="project-type">Data Analytics · Power BI</span><span class="project-year">Dashboard project</span></div><h3>Blinkit Sales Analysis Dashboard</h3><p>A sales dashboard project focused on reviewing product and outlet performance, comparing key metrics, and presenting business trends through visual reports.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">KPIs</span><span class="chip">Data Visualization</span><span class="chip">Business Insights</span></div><div class="project-links"><a href="https://github.com/Priti1407/Blinkit-Sales-Performance-Dashboard" target="_blank" rel="noopener noreferrer">View source code <span>↗</span></a></div></div></article>
+      </div>
+    </div></section>
+    <section class="services-section" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">HOW I CAN HELP</div>
+          <h2>Services &amp; small tasks</h2>
+          <p>Practical support for websites, data preparation, and clear reporting.</p>
+        </div>
+        <div class="services-reference-grid">
+          <article class="service-reference-card">
+            <div class="service-reference-icon" aria-hidden="true">⌘</div>
+            <h3>Website Updates</h3>
+            <p>Small website changes, responsive layout fixes, content updates, and basic front-end bug fixing.</p>
+          </article>
+          <article class="service-reference-card">
+            <div class="service-reference-icon" aria-hidden="true">✦</div>
+            <h3>Website Creation</h3>
+            <p>Building clean, responsive websites and landing pages that look good on desktop and mobile devices.</p>
+          </article>
+          <article class="service-reference-card">
+            <div class="service-reference-icon" aria-hidden="true">▥</div>
+            <h3>Dashboard &amp; Reports</h3>
+            <p>Creating simple charts, KPI summaries, and beginner-level Power BI or Excel reports to make data easier to understand.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="education" id="education"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">My background</div><h2>Education & development</h2><p>The academic foundation behind my focus on front-end and web development.</p></div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="date">2025</div><h3>Bachelor of Engineering — Information Technology</h3><p>Savitribai Phule Pune University.</p></div>
+        <div class="timeline-item"><div class="date">CONTINUOUS LEARNING</div><h3>Front-End & Web Development</h3><p>Building practical experience with HTML, CSS, JavaScript, responsive layouts, and interactive web projects through hands-on practice.</p></div>
+      </div>
+    </div></section>
+    <section id="development"><div class="wrap"><div class="section-head"><div class="eyebrow">What’s next</div><h2>Learning by building</h2><p>Continuously improving my front-end skills by creating responsive websites, refining interfaces, and practising maintainable code.</p></div><div class="learning-grid"><article class="learning-card"><div class="status">Front-end foundations</div><h3>Write clean, accessible code</h3><p>Strengthening HTML structure, CSS styling, JavaScript fundamentals, and accessibility practices for dependable web interfaces.</p></article><article class="learning-card"><div class="status">Responsive experiences</div><h3>Build for every screen</h3><p>Practising responsive layouts and interactive features to make websites clear and comfortable to use on different devices.</p></article></div></div></section>
+    <section class="contact" id="contact"><div class="wrap"><div class="contact-panel"><div><div class="eyebrow">Have an opportunity?</div><h2>Let's connect.</h2><p>I’m primarily focused on entry-level Web Developer opportunities and front-end projects, and I also welcome opportunities involving data reporting or dashboards. Feel free to reach out — I’d love to connect!</p></div><div class="contact-actions"><a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=pritigarudkar%40gmail.com&su=Portfolio%20Contact" target="_blank" rel="noopener noreferrer" aria-label="Email Priti Garudkar at pritigarudkar@gmail.com">Email me ↗</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/priti-garudkar-76a846250" target="_blank" rel="noopener noreferrer" aria-label="Connect with Priti Garudkar on LinkedIn">LinkedIn ↗</a><a class="btn btn-secondary" href="https://wa.me/918459141868" target="_blank" rel="noopener noreferrer" aria-label="Message Priti Garudkar on WhatsApp">WhatsApp ↗</a></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div>© 2026 <strong>Priti Garudkar</strong>. Building for the web. Always learning.</div><div class="socials"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=pritigarudkar%40gmail.com" target="_blank" rel="noopener noreferrer">Gmail me</a><a href="https://www.linkedin.com/in/priti-garudkar-76a846250" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://wa.me/918459141868" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="#home">Back to top ↑</a></div></div></footer>
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => { const open = links.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(open)); toggle.textContent = open ? '×' : '☰'; });
+    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.textContent='☰'; }));
+  </script>
+</body>
+</html>
